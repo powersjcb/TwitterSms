@@ -10,7 +10,7 @@
 #
 
 class Tweet < ActiveRecord::Base
-  validates :user_id
-  
+  validates :content, presence: true, allow_blank: false
+    default_scope { order('created_at DESC') }
 
 end

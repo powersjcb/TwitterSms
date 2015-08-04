@@ -1,0 +1,14 @@
+<% source_label = (tweet.sms) ? 'SMS' : 'WEB' %>
+
+
+<div class="tweet" id="<%= tweet.id %>">
+<hr>
+  <div class="source"><%= source_label %></div>
+  <div class="timestamp"><%= tweet.created_at %></div>
+  <hr>
+  <div class="content">
+    <%= tweet.content %>
+  </div>
+  <hr>
+<br>
+</div>
